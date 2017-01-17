@@ -80,6 +80,7 @@ set autochdir
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set nu
 "
 " " more subtle popup colors
 if has ('gui_running')
