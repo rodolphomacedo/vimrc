@@ -1,30 +1,31 @@
-set nocompatible
-filetype off
+set nocompatible 
+filetype off  
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'powerline/powerline'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
-" Powerline
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
 
-" NerdTree
-Bundle 'scrooloose/nerdtree'
-
 map <F2> :NERDTreeToggle<CR>
+map <F9> :TagbarToggle<CR>
 
-" Fugitive
-Bundle 'tpope/vim-fugitive'
 
-" Python Mode
-Bundle 'klen/python-mode'
+let g:pymode_python = 'python3'
+let g:airline#extensions#tabline#enabled = 1
+
 
 " Python-mode
 " " Activate rope
@@ -87,20 +88,3 @@ if has ('gui_running')
     highlight Pmenu guibg=#cccccc gui=bold
 endif
 
-
-
-
-
-
-" The bundles you install will be listed here
-
-filetype plugin indent on
-
-" The rest of your config follows here
-augroup vimrc_autocmds
-    autocmd!
-    " highlight characters past column 120
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%80v.*/
-    autocmd FileType python set nowrap
-    augroup END
