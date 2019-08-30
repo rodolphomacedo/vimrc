@@ -1,6 +1,5 @@
-# vimrc
-vimrc for dev python
+# My vimrc
+vimrc for data science python
 
-Use: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+Use: git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-from https://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
