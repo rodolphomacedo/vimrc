@@ -33,7 +33,8 @@ bash_prompt_command() {
   #EXIT_CODE='$(if [[ $RETURN = 0 ]]; then echo -ne ""; else echo -ne "\[$EMR\]$RETURN\[$NONE\] "; fi;)'
 }
 
-PROMPT_VCS=1 # version control system name, branch and dirty status
+#PROMPT_VCS=1 # version control system name, branch and dirty status
+PROMPT_VCS=0 # version control system name, branch and dirty status
 
 prompt.vcs.enable(){
   PROMPT_VCS=1
